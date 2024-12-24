@@ -1,0 +1,9 @@
+targets:
+  $default:
+    builders:
+      graphql_codegen|graphql_builder:
+        options:
+          schema: https://api-dev.autobse.com/graphql
+          queries_glob: lib/data/graphql/query/**/*.graphql
+          mutations_glob: lib/data/graphql/mutation/**/*.graphql
+          output: lib/data/graphql/generated/
