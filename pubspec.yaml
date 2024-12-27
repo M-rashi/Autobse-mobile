@@ -1,0 +1,32 @@
+name: autobse
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  graphql_flutter: ^5.2.0-beta.5 # Use GraphQL Flutter for API calls
+  json_annotation: ^4.0.1 # For JSON serialization
+  flutter_riverpod: ^2.0.0 # For state management with Riverpod
+  connectivity_plus: ^4.0.0 # Added for connectivity checks
+  shared_preferences: ^2.1.0 # For local storage of user data
+  flutter_secure_storage: ^8.0.0 # Secure storage for sensitive data
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  build_runner: ^2.4.13 # For code generation
+  graphql_codegen: ^1.1.1 # Downgraded for compatibility
+  json_serializable: ^6.9.0
+  freezed: ^2.5.7
+
+flutter:
+  uses-material-design: true
