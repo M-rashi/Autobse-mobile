@@ -10,7 +10,7 @@ class AuctionsList extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final auctions = ref.watch(auctionsProvider);
-   print
+    print(auctions);
     return Column(
       children: auctions
           .map((auction) => Column(
