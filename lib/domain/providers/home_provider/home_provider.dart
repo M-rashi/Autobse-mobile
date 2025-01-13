@@ -40,18 +40,19 @@ class Auction {
 
 // State Notifier
 class AuctionsNotifier extends StateNotifier<List<Auction>> {
-  AuctionsNotifier() : super([
-    Auction(
-      id: '1',
-      title: 'Ashok Leyland Truck',
-      rating: 4.8,
-      reviews: 12800,
-      imageUrl: 'assets/truck_image.png',
-      auctionDate: DateTime(2024, 9, 27, 12, 0),
-      price: 2000000,
-    ),
-    // Add more auctions as needed
-  ]);
+  AuctionsNotifier()
+      : super([
+          Auction(
+            id: '1',
+            title: 'Ashok Leyland Truck',
+            rating: 4.8,
+            reviews: 12800,
+            imageUrl: 'assets/truck_image.png',
+            auctionDate: DateTime(2024, 9, 27, 12, 0),
+            price: 2000000,
+          ),
+          // Add more auctions as needed
+        ]);
 
   void toggleBookmark(String auctionId) {
     state = state.map((auction) {
@@ -64,18 +65,17 @@ class AuctionsNotifier extends StateNotifier<List<Auction>> {
 
   void searchAuctions(String query) {
     if (query.isEmpty) return;
-    // Implement search logic here
+    // Implement seach logic here
   }
 }
 
 // Providers
-final userProvider = StateProvider((ref) => {
-  'name': 'Anand',
-  'location': 'Trivandrum'
-});
+final userProvider =
+    StateProvider((ref) => {'name': 'Shibu', 'location': 'Trivandrum'});
 
 final searchQueryProvider = StateProvider((ref) => '');
 
-final auctionsProvider = StateNotifierProvider<AuctionsNotifier, List<Auction>>((ref) {
+final auctionsProvider =
+    StateNotifierProvider<AuctionsNotifier, List<Auction>>((ref) {
   return AuctionsNotifier();
 });

@@ -3,6 +3,7 @@ import 'package:autobse/presentation/pages/explore/explore_screen.dart';
 import 'package:autobse/presentation/pages/login/login_screen.dart';
 import 'package:autobse/presentation/pages/home/home_screen.dart';
 import 'package:autobse/presentation/pages/sign%20up/signin_screen.dart';
+import 'package:autobse/presentation/pages/live_auction/live_auction_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRoutes {
@@ -11,6 +12,7 @@ class AppRoutes {
   static const String explore = '/explore';
   static const String account = '/account';
   static const String createAccount = '/create-account';
+  static const String liveAuction = '/live-auction';
 
   static Route? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -24,6 +26,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const AccountPage());
       case createAccount:
         return MaterialPageRoute(builder: (_) => const CreateAccountPage());
+      case liveAuction:
+        return MaterialPageRoute(builder: (_) => const LiveAuctionsScreen());
       default:
         return null;
     }
